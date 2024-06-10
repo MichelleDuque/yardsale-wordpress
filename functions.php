@@ -28,3 +28,23 @@ function plz_analytics(){
 }
 
 add_action("wp_body_open","plz_analytics");
+
+
+//Theme supports necesarios para agregar
+function plz_theme_supports(){
+    //Agregar el titulo de la página de manera dinamica 
+    add_theme_support("title-tag");
+    //Agregar imagen destacada
+    add_theme_support("post-thumbnails");
+    //Agregar logo
+    add_theme_support("custom-logo",
+    array(
+        "width" => 170,
+        "height" => 35,
+        "flex-width" => true,
+        "flex-height" => true,
+    )
+    );
+}
+
+add_action("after_setup_theme", "plz_theme_supports");
