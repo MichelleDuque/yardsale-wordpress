@@ -19,3 +19,12 @@ function plz_assets(){
 
 // Para ejecutar las funciones, se usa un action para que se ejecute cuando incorpore los estilos. Primer argumento es donde quiero que se cargue el hook que se llama "wp_enqueue_scripts", segundo argumento son las funciones que quiero ejecutar.
 add_action("wp_enqueue_scripts","plz_assets");
+
+//Codigo para el body open del header
+function plz_analytics(){
+    ?>
+
+    <?php
+}
+
+add_action("wp_body_open","plz_analytics");
