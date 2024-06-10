@@ -48,3 +48,16 @@ function plz_theme_supports(){
 }
 
 add_action("after_setup_theme", "plz_theme_supports");
+
+//Menus
+function plz_add_menus(){
+    //Fregistrar los menus
+    register_nav_menus(
+        array(
+        "menu-principal" => "Menu Principal",
+        "menu-responsive" => "Menu Responsive"
+        )
+    );
+}
+
+add_action("after_setup_theme", "plz_add_menus");
