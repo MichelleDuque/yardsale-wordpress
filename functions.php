@@ -111,3 +111,19 @@ function plz_add_custom_post_type(){
 }
 
 add_action("init", "plz_add_custom_post_type");
+
+
+//Sign In Dinamico
+function plz_add_to_signin_menu(){
+
+    $current_user = wp_get_current_user();
+
+
+
+    $msg = is_user_logged_in()? $current_user->user_email : "Sign in";
+
+    echo $msg;
+
+}
+
+add_action("plz_signin", "plz_add_to_signin_menu");
